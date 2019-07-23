@@ -43,6 +43,10 @@ rQuote <- function(tag = 'science', page_range = 1,
   author <- trimws(res[random_row, 'author'])
   author <- paste0("-  ", author)
 
+  if(length(quote) == 0) {
+    stop("No quote found. Probably the tag you are searching for does not exist. Change tag and try again.")
+  }
+
   linebreaks <- strrep('\n', 4)
   whitespace <- strrep(' ', 180)
 
