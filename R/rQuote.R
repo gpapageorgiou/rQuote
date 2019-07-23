@@ -3,7 +3,7 @@
 #'
 #' @param tag A character string specifying the desired tag to look quotes from
 #' @param page_range Integer between 0 and 100 specifying the number of goodreads' pages with the specific tag to look quotes from
-
+#' @export
 
 rQuote <- function(tag = 'science', page_range = 1,
                             cores = detectCores() - 1,
@@ -29,23 +29,23 @@ rQuote <- function(tag = 'science', page_range = 1,
   urls <- do.call(c, urls)
 
   #
-  cl <- parallel::makeCluster(cores)
-  doParallel::registerDoParallel(cl)
+  cl <- makeCluster(cores)
+  registerDoParallel(cl)
 
-  res <- foreach::foreach(i = seq_along(urls),
+  res <- foreach(i = seq_along(urls),
                           .packages = c("rvest", 'xml2'),
                           .combine = rbind) %dopar% {
                             quote <- rvest::html_session(urls[i]) %>%
-                              rvest::html_nodes('div.quoteText') %>%
-                              rvest::html_text()
+                              html_nodes('div.quoteText') %>%
+                              html_text()
                             author <- rvest::html_session(urls[i]) %>%
-                              rvest::html_nodes('span.authorOrTitle') %>%
-                              rvest::html_text()
+                              html_nodes('span.authorOrTitle') %>%
+                              html_text()
                             quote <- gsub('(.*)[ ][\u201c](.*)[\u201d][\n](.*)', "\\2", quote)
                             author <- gsub('([,\n|\n]*)([^,])', '\\2', author)
                             cbind(quote, author)
                  }
-  parallel::stopCluster(cl)
+  stopCluster(cl)
 
   random_row <- sample(nrow(res), 1)
   quote <- res[random_row, 'quote']
@@ -59,9 +59,9 @@ rQuote <- function(tag = 'science', page_range = 1,
   linebreaks <- strrep('\n', 4)
   whitespace <- strrep(' ', 180)
 
-  showtext::font_add_google('Francois One', 'Francois One')
+  font_add_google('Francois One', 'Francois One')
 
-  showtext::showtext_auto()
+  showtext_auto()
 
   cat(quote, "\n", "\n", author)
 
