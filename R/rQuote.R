@@ -1,3 +1,10 @@
+#' rQuote
+#' @description  Prints a random quote extracted from the goodreads.com database
+#'
+#' @param tag A character string specifying the desired tag to look quotes from
+#' @param page_range Integer between 0 and 100 specifying the number of goodreads' pages with the specific tag to look quotes from
+
+
 rQuote <- function(tag = 'science', page_range = 1,
                             cores = detectCores() - 1,
                    OS = c('windows', 'linux', 'macOS'),
