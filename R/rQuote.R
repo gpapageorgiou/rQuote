@@ -1,5 +1,7 @@
 rQuote <- function(tag = 'science', page_range = 10,
-                            cores = detectCores() - 1) {
+                            cores = detectCores() - 1,
+                   OS = c('windows', 'linux', 'macOS'),
+                   theme = c('light', 'dark')) {
 
   # check page range
   if (page_range > 100) {
@@ -36,5 +38,18 @@ rQuote <- function(tag = 'science', page_range = 10,
                  }
   stopCluster(cl)
 
-  res[sample(nrow(res), 1), ]
+  random_row <- sample(nrow(res), 1)
+  quote <- res[random_row, 'quote']
+  author <- trimws(res[random_row, 'author'])
+
+  cat(quote, "\n", "\n", '-', author)
+
+  OS <- match.arg(OS)
+  switch(OS,
+         windows = win.graph(),
+         linux = x11(),
+         macOS = quartz())
+
+
+
 }
