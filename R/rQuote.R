@@ -1,4 +1,4 @@
-rQuote <- function(tag = 'science', page_range = 10,
+rQuote <- function(tag = 'science', page_range = 1,
                             cores = detectCores() - 1,
                    OS = c('windows', 'linux', 'macOS'),
                    theme = c('light', 'dark')) {
@@ -44,7 +44,7 @@ rQuote <- function(tag = 'science', page_range = 10,
   author <- paste0("-  ", author)
 
   linebreaks <- strrep('\n', 4)
-  whitespace <- strrep(' ', 100)
+  whitespace <- strrep(' ', 180)
 
   font_add_google('Francois One', 'Francois One')
 
@@ -56,24 +56,24 @@ rQuote <- function(tag = 'science', page_range = 10,
   if (theme == 'light') {
     outplot <- ggplot() + xlim(0, 4) + ylim(0, 4) + theme_void() +
       theme(panel.background = element_rect(fill = '#f5f5f5')) +
-      geom_text(aes(x = 2, y = 2), label = paste("“", wrapit(quote), "”",
+      geom_text(aes(x = 2, y = 2), label = paste("\u201c", wrapit(quote), "\u201d",
                                                  linebreaks,
                                                  whitespace, author),
-                size = 6, color = "#363636",
+                size = 7, color = "#363636",
                 family = 'Francois One')
   } else {
     outplot <- ggplot() + xlim(0, 4) + ylim(0, 4) + theme_void() +
       theme(panel.background = element_rect(fill = '#363636')) +
-      geom_text(aes(x = 2, y = 2), label = paste("“", wrapit(quote), "”",
+      geom_text(aes(x = 2, y = 2), label = paste("\u201c", wrapit(quote), "\u201d",
                                                  linebreaks,
                                                  whitespace, author),
-                size = 6, color = "#f5f5f5" ,
+                size = 7, color = "#f5f5f5" ,
                 family = 'Francois One')
   }
 
   OS <- match.arg(OS)
   switch(OS,
-         windows = win.graph(width = 18, height = 9),
+         windows = win.graph(width = 32, height = 16),
          linux = x11(),
          macOS = quartz())
 
