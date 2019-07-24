@@ -1,0 +1,17 @@
+---
+title: "Get a quote. A random quote"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get a quote. A random quote}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+To get a quote
