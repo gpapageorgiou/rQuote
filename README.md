@@ -1,1 +1,1 @@
-# rQuote <img src="man/figures/logo_dark.svg" align="right" alt="" width="120" />
+# rQuote <img src="man/figures/logo_dark.svg" align="right" alt="" width="160" />
