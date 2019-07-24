@@ -9,7 +9,14 @@ rQuote <- function(tag = 'science', page_range = 1,
                             cores = detectCores() - 1,
                    OS = c('windows', 'linux', 'macOS'),
                    theme = c('light', 'dark'),
-                   popup = TRUE) {
+                   popup = TRUE,
+                   control = NULL, ...) {
+
+  con <- list(width = 48,
+              height = 24)
+  control <- c(control, list(...))
+  namescon <- names(con)
+  con[(namescon <- names(control))] <- control
 
   # check page range
   if (page_range > 100) {
@@ -99,7 +106,7 @@ rQuote <- function(tag = 'science', page_range = 1,
 
     OS <- match.arg(OS)
     switch(OS,
-           windows = win.graph(width = 32, height = 16),
+           windows = win.graph(width = con$width, height = con$height),
            linux = x11(),
            macOS = quartz())
 
