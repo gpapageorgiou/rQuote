@@ -32,7 +32,8 @@ body > .container .row {
 footer {
   margin-top: 45px;
   padding: 35px 0 36px;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
+  border-top: 2px solid #363636;
   color: #666;
   display: flex;
   flex-shrink: 0;
@@ -244,3 +245,4 @@ h1.hasAnchor {
   color: #363636;
   font-family: 'Orbitron', sans-serif;;
 }
+
