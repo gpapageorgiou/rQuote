@@ -5,7 +5,8 @@
 \title{rQuote}
 \usage{
 rQuote(tag = "science", page_range = 1, cores = detectCores() - 1,
-  OS = c("windows", "linux", "macOS"), theme = c("light", "dark"))
+  OS = c("windows", "linux", "macOS"), theme = c("light", "dark"),
+  popup = TRUE, control = NULL, ...)
 }
 \arguments{
 \item{tag}{A character string specifying the desired tag to look quotes from}

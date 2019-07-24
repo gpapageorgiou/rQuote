@@ -1,0 +1,19 @@
+---
+title: "Quotes about Quotes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Quotes about Quotes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+<span style = "font-family: 'Fredericka the Great' !important; font-size = 60px"> &ldquo; </span> Quotes <span style = "font-family: 'Fredericka the Great' !important; font-size = 60px"> &rdquo; </span>
+
+<span style = 'color: blue'> skata </span>
