@@ -1,6 +1,13 @@
 # rQuote <img src="man/figures/logo.svg" align="right" alt="" width="180" />
 
-Description
-------------
+<span style = "font-family: Orbitron"><strong>rQuote</strong></span> prints a random quote. And that pretty much covers everything this package can do.
 
-<strong>rQuote</strong> prints a random quote. The quotes are searched on the extensive Goodreads databease. 
+Installation
+-------------
+
+To install <span style = "font-family: Orbitron"><strong>rQuote</strong></span> use the following code:
+
+```r
+# install.packages('devtools')
+install_github('gpapageorgiou/rQuote')
+```
