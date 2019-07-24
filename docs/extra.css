@@ -234,3 +234,13 @@ mark {
 .html-widget {
   margin-bottom: 10px;
 }
+
+
+/*################################
+/* CUSTOMIAZATIONS
+##################################*/
+
+h1.hasAnchor {
+  color: #363636;
+  font-family: 'Orbitron', sans-serif;;
+}
