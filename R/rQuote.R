@@ -43,11 +43,9 @@ rQuote <- function(tag = 'science', page_range = 1,
   res <- foreach(i = seq_along(urls),
                           .packages = c("rvest", 'xml2'),
                           .combine = rbind) %dopar% {
-                            quote <- rvest::html_session(urls[i]) %>%
-                              html_nodes('div.quoteText') %>%
+                            quote <- html_nodes(read_html(urls[i]), 'div.quoteText') %>%
                               html_text()
-                            author <- rvest::html_session(urls[i]) %>%
-                              html_nodes('span.authorOrTitle') %>%
+                            author <- html_nodes(read_html(urls[i]), 'span.authorOrTitle') %>%
                               html_text()
                             quote <- gsub('(.*)[ ][\u201c](.*)[\u201d][\n](.*)', "\\2", quote)
                             author <- gsub('([,\n|\n]*)([^,])', '\\2', author)
