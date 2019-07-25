@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-<span style = "font-family: 'Fredericka the Great' !important; font-size = 60px"> &ldquo; </span> Quotes <span style = "font-family: 'Fredericka the Great' !important; font-size = 60px"> &rdquo; </span>
+<span style = "font-family: 'Fredericka the Great' !important; font-size = 60px !important"> &ldquo; </span> Quotes <span style = "font-family: 'Fredericka the Great' !important; font-size = 60px !important"> &rdquo; </span>
 
 <span style = 'color: blue'> skata </span>
+
+![](F:/Greg/Github_Repos/rQuote/man/figures/ambrose_bierce.svg)
