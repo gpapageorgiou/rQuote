@@ -6,9 +6,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-
 
 Installation
 -------------
@@ -20,16 +17,12 @@ To install <span style = "font-family: Orbitron"><strong>rQuote</strong></span> 
 install_github('gpapageorgiou/rQuote')
 ```
 
-<br/>
-
 Get a random quote
 -------------------
 
 ```r
 rQuote()
 ```
-
-<br/>
 
 Get a random quote about statistics
 -------------------
