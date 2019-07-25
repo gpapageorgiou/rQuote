@@ -149,7 +149,30 @@
     </tr>
     <tr>
       <th>page_range</th>
-      <td><p>Integer between 0 and 100 specifying the number of goodreads' pages with the specific tag to look quotes from</p></td>
+      <td><p>Integer specifying the number of Goodreads' pages with the specific tag to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.</p></td>
+    </tr>
+    <tr>
+      <th>cores</th>
+      <td><p>Integer specifying the number of cores to be used by the function. Defaults to the number of cores dtected on the current host minus 1.</p></td>
+    </tr>
+    <tr>
+      <th>OS</th>
+      <td><p>Character string specifying the Operating System of the current host. Defaults to windows.</p></td>
+    </tr>
+    <tr>
+      <th>theme</th>
+      <td><p>Character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.</p></td>
+    </tr>
+    <tr>
+      <th>popup</th>
+      <td><p>Logical; if TRUE a pop-up plot window with the quote appears.</p></td>
+    </tr>
+    <tr>
+      <th>control</th>
+      <td><p>a list of control values with components:</p><ul>
+<li><p>width: width of plotting device</p></li>
+<li><p>height: height of plotting device</p></li>
+</ul></td>
     </tr>
     </table>
     
@@ -161,6 +184,8 @@
       <li><a href="#arguments">Arguments</a></li>
                 </ul>
 
+    <h2>Author</h2>
+    <p>Grigorios Papageorgiou <a href='mailto:g.papageorgiou@erasmusmc.nl'>g.papageorgiou@erasmusmc.nl</a></p>
   </div>
 </div>
 

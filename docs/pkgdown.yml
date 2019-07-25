@@ -1,5 +1,7 @@
 pandoc: '2.6'
 pkgdown: 1.3.0
 pkgdown_sha: ~
-articles: []
+articles:
+  get_started: get_started.html
+  quotes_squared: quotes_squared.html
 
