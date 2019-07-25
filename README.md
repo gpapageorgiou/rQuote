@@ -28,3 +28,12 @@ Get a random quote
 ```r
 rQuote()
 ```
+
+<br/>
+
+Get a random quote about statistics
+-------------------
+
+```r
+rQuote(tag = 'statistics')
+```

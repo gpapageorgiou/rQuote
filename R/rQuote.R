@@ -23,14 +23,25 @@ rQuote <- function(tag = 'science', page_range = 1,
     stop('Page range should be equal or less than 100')
   }
 
-  if (page_range < 100) {
-    pages <- sample(1:100, page_range, replace = FALSE)
-  } else {
-    pages <- 1:page_range
-  }
-
   # create initial url according to tag input
   url <- paste0('https://www.goodreads.com/quotes/tag/', tag)
+
+  # find maximum number of pages
+  max_pages <- html_nodes(read_html(url), 'a')
+  max_pages <- max_pages[grep('page=', max_pages)]
+  max_pages <- gsub('(.*)[>]([0-9]*)[<](.*)', '\\2', max_pages)
+  max_pages <- max_pages[-length(max_pages)]
+  max_pages <- as.integer(max_pages)
+  max_pages <- max(max_pages)
+
+  if (page_range < max_pages) {
+    pages <- sample(1:max_pages, page_range, replace = FALSE)
+  } else if (page_range < max_pages) {
+    pages <- 1:page_range
+  } else {
+    stop(paste('The maximum number of pages for the tag = ', '"', 'tag', '"', 'is', max_pages, '\n',
+               'Try a page range equal or less than', max_pages))
+  }
 
   # create list of urls
   urls <- lapply(pages, FUN = function (x, url) paste0(url, '?page=', x), url)
