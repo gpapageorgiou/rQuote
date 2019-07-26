@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advanced rQuoting • rQuote</title>
+<title>Basic Advanced rQuoting • rQuote</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -16,7 +16,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<script src="../extra.js"></script><meta property="og:title" content="Advanced rQuoting">
+<script src="../extra.js"></script><meta property="og:title" content="Basic Advanced rQuoting">
 <meta property="og:description" content="">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
@@ -64,7 +64,7 @@
       <a href="../articles/care_to_explain.html">Care to explain?</a>
     </li>
     <li>
-      <a href="../articles/advanced_r_quoting.html">Advanced rQuoting</a>
+      <a href="../articles/advanced_r_quoting.html">Basic Advanced rQuoting</a>
     </li>
   </ul>
 </li>
@@ -88,7 +88,7 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Advanced rQuoting</h1>
+      <h1>Basic Advanced rQuoting</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/gpapageorgiou/rQuote/blob/master/vignettes/advanced_r_quoting.Rmd"><code>vignettes/advanced_r_quoting.Rmd</code></a></small>
@@ -98,23 +98,33 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rQuote)</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="co">#&gt; Loading required package: rvest</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="co">#&gt; Loading required package: xml2</span></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="co">#&gt; Loading required package: doParallel</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="co">#&gt; Loading required package: foreach</span></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="co">#&gt; Loading required package: iterators</span></a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="co">#&gt; Loading required package: parallel</span></a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="co">#&gt; Loading required package: ggplot2</span></a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="co">#&gt; Loading required package: showtext</span></a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="co">#&gt; Loading required package: sysfonts</span></a>
-<a class="sourceLine" id="cb1-11" title="11"><span class="co">#&gt; Loading required package: showtextdb</span></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="co">#&gt; Loading required package: stringi</span></a></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co">#rQuote()</span></a></code></pre></div>
-<p><img src="../charles_darwin.png"></p>
+<div id="basic-rquoting" class="section level2">
+<h2 class="hasAnchor">
+<a href="#basic-rquoting" class="anchor"></a>Basic rQuoting</h2>
+<p>Start by loading <span style="font-family: 'orbitron'"> rQuote </span>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rQuote)</a></code></pre></div>
+<p>Running <code><a href="../reference/rQuote.html">rQuote()</a></code> without changing any of the default arguments, will print a ‘science’ tagged quote on your console as well as on a pop-up graphics device:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="../reference/rQuote.html">rQuote</a></span>()</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">#&gt; An expert is a person who has made all the mistakes that can be made in a very narrow field. </span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">#&gt;  </span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">#&gt;  -  Niels Bohr</span></a></code></pre></div>
+<p><img src="../niels_bohr.png"></p>
+</div>
+<div id="advanced-rquoting" class="section level2">
+<h2 class="hasAnchor">
+<a href="#advanced-rquoting" class="anchor"></a>Advanced rQuoting</h2>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+        <div id="tocnav">
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+<li><a href="#basic-rquoting">Basic rQuoting</a></li>
+      <li><a href="#advanced-rquoting">Advanced rQuoting</a></li>
+      </ul>
+</div>
       </div>
 
 </div>

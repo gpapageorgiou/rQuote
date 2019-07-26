@@ -1,5 +1,5 @@
 ---
-title: "Advanced rQuoting"
+title: "Basic Advanced rQuoting"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Advanced rQuoting}
@@ -14,12 +14,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+## Basic rQuoting
+
+Start by loading <span style = "font-family: 'orbitron'"> rQuote </span>.
+
+```{r setup, message = FALSE, warning = FALSE}
 library(rQuote)
 ```
 
-```{r}
-#rQuote()
+```{r, echo = FALSE}
+set.seed(268)
 ```
 
-<img src = "../charles_darwin.png">
+Running `rQuote()` without changing any of the default arguments, will print a 'science' tagged quote on your console as well as on a pop-up graphics device:
+
+```{r}
+rQuote()
+```
+
+<img src = "../niels_bohr.png">
+
+## Advanced rQuoting
+
