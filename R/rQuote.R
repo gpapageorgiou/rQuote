@@ -93,8 +93,6 @@ rQuote <- function(tag = 'science', page_range = 1,
 
     showtext_auto()
 
-    print(nchar(quote))
-
     con$text_size <- ifelse(nchar(quote) > 1750, 5, con$text_size)
 
     theme <- match.arg(theme)
