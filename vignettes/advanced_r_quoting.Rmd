@@ -1,8 +1,8 @@
 ---
-title: "Get a quote. A random quote"
+title: "Advanced rQuoting"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Get a quote. A random quote}
+  %\VignetteIndexEntry{Advanced rQuoting}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,4 +14,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-To get a quote
+```{r setup}
+library(rQuote)
+```
+
+```{r}
+#rQuote()
+```
+
+<img src = "../charles_darwin.png">

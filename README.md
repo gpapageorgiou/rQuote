@@ -7,11 +7,11 @@ Who is it for
 
 Do you need some random words of wisdom?
 
-Do you hate awkward silences but have nothing clever and random enough to break them with?
+Do you need a random proposition to include in your PhD Thesis?
 
-Are you about to hand your PhD Thesis and need some random inspiration for your propositions?
+Do you need something randomly clever to break awkward silences in conferences?
 
-Do you like random advice from random wise people?
+Do you like quotes?
 
 Then you might enjoy <span style = "font-family: Orbitron"><strong>rQuote</strong></span>.
 

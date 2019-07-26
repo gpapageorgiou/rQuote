@@ -23,7 +23,8 @@ rQuote <- function(tag = 'science', page_range = 1,
                    control = NULL, ...) {
 
   con <- list(width = 48,
-              height = 24)
+              height = 24,
+              text_size = 7)
   control <- c(control, list(...))
   namescon <- names(con)
   con[(namescon <- names(control))] <- control
@@ -85,12 +86,16 @@ rQuote <- function(tag = 'science', page_range = 1,
 
   if (popup) {
     linebreaks <- strrep('\n', 4)
-    whitespace <- strrep(' ', 180)
+    whitespace <- strrep(' ', 140)
 
     font_add_google('Francois One', 'Francois One')
     font_add_google('Fredericka the Great', 'Fredericka the Great')
 
     showtext_auto()
+
+    print(nchar(quote))
+
+    con$text_size <- ifelse(nchar(quote) > 1750, 5, con$text_size)
 
     theme <- match.arg(theme)
     if (theme == 'light') {
@@ -99,7 +104,7 @@ rQuote <- function(tag = 'science', page_range = 1,
         geom_text(aes(x = 2, y = 2), label = paste("\u201c", wrapit(quote), "\u201d",
                                                    linebreaks,
                                                    whitespace, author),
-                  size = 7, color = "#363636",
+                  size = con$text_size, color = "#363636",
                   family = 'Francois One') +
         geom_text(aes(x = 3.75, y = 0), label = paste("\u201c"),
                   size = 50, color = '#363636',
@@ -113,7 +118,7 @@ rQuote <- function(tag = 'science', page_range = 1,
         geom_text(aes(x = 2, y = 2), label = paste("\u201c", wrapit(quote), "\u201d",
                                                    linebreaks,
                                                    whitespace, author),
-                  size = 7, color = "#f5f5f5" ,
+                  size = con$text_size, color = "#f5f5f5" ,
                   family = 'Francois One') +
         geom_text(aes(x = 3.75, y = 0), label = paste("\u201c"),
                   size = 50, color = '#f5f5f5',
