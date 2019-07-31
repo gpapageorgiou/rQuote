@@ -2,27 +2,29 @@
 #' @description  Prints a random quote extracted from the goodreads.com database
 #'
 #' @param tag A character string specifying the desired tag to look quotes from
-#' @param page_range Integer specifying the number of Goodreads' pages with the specific tag to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.
 #' @param cores Integer specifying the number of cores to be used by the function. Defaults to the number of cores dtected on the current host minus 1.
 #' @param OS Character string specifying the Operating System of the current host. Defaults to windows.
 #' @param theme Character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.
 #' @param popup Logical; if TRUE a pop-up plot window with the quote appears.
 #' @param control a list of control values with components: \itemize{
+#' \item{page_range Integer specifying the number of Goodreads' pages with the specific tag to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.}
 #' \item{width: width of plotting device}
 #' \item{height: height of plotting device}
+#'
 #' }
 #'
 #' @author Grigorios Papageorgiou \email{g.papageorgiou@@erasmusmc.nl}
 #' @export
 
-rQuote <- function(tag = 'science', page_range = 1,
-                            cores = detectCores() - 1,
+rQuote <- function(tag = 'science',
+                   cores = detectCores() - 1,
                    OS = c('windows', 'linux', 'macOS'),
                    theme = c('light', 'dark'),
                    popup = TRUE,
                    control = NULL, ...) {
 
-  con <- list(width = 48,
+  con <- list(page_range = 1,
+              width = 48,
               height = 24,
               text_size = 7)
   control <- c(control, list(...))
@@ -30,7 +32,7 @@ rQuote <- function(tag = 'science', page_range = 1,
   con[(namescon <- names(control))] <- control
 
   # check page range
-  if (page_range > 100) {
+  if (con$page_range > 100) {
     stop('Page range should be equal or less than 100')
   }
 
@@ -45,10 +47,10 @@ rQuote <- function(tag = 'science', page_range = 1,
   max_pages <- as.integer(max_pages)
   max_pages <- max(max_pages)
 
-  if (page_range < max_pages) {
-    pages <- sample(1:max_pages, page_range, replace = FALSE)
-  } else if (page_range < max_pages) {
-    pages <- 1:page_range
+  if (con$page_range < max_pages) {
+    pages <- sample(1:max_pages, con$page_range, replace = FALSE)
+  } else if (con$page_range < max_pages) {
+    pages <- 1:con$page_range
   } else {
     stop(paste('The maximum number of pages for the tag = ', '"', 'tag', '"', 'is', max_pages, '\n',
                'Try a page range equal or less than', max_pages))

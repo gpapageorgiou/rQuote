@@ -34,5 +34,17 @@ rQuote()
 
 <img src = "../niels_bohr.png">
 
+You can change the theme of the pop-up graphics device by specifying `theme = dark`
+
+```{r, echo = FALSE}
+set.seed(268)
+```
+
+```{r}
+rQuote(theme = 'dark')
+```
+
+<img src = "../niels_bohr_dark.png">
+
 ## Advanced rQuoting
 
