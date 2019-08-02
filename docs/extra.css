@@ -275,3 +275,8 @@ p {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
 }
+
+a.navbar-link {
+  font-family: 'Orbitron', sans-serif;
+  color rgba(54, 54, 54, 1);
+}

@@ -1,5 +1,5 @@
 ---
-title: "Care to explain?"
+title: "About"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Care to explain?}

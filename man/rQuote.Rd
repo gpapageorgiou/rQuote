@@ -30,7 +30,7 @@ rQuote(tag = "science", cores = detectCores() - 1, OS = c("windows",
 Prints a random quote extracted from goodreads.com
 }
 \details{
-Argument \strong{tag} refers to the available user defined tags in goodreads.
+Argument \strong{tag} refers to the available user defined tags in goodreads.com.
 They consist of a single word with lowercase characters (e.g 'politics', 'sports', ...).
 They do not contain spaces, special characters or uppercase letters. If the user inputs a tag that
 does not exist in goodreads.com, then no quote will be found and an error message will appear.
