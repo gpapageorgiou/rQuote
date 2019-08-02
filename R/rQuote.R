@@ -50,11 +50,17 @@ rQuote <- function(tag = 'science',
   max_pages <- gsub('(.*)[>]([0-9]*)[<](.*)', '\\2', max_pages)
   max_pages <- max_pages[-length(max_pages)]
   max_pages <- as.integer(max_pages)
-  max_pages <- max(max_pages)
+
+  if (length(max_pages) == 0) {
+    stop(paste('Unfortunately there are no quotes classified as',
+               tag, '.\n', 'Please try another tag and make sure that it is a single word with lowercase characters.'))
+  } else {
+    max_pages <- max(max_pages)
+  }
 
   if (con$page_range < max_pages) {
     pages <- sample(1:max_pages, con$page_range, replace = FALSE)
-  } else if (con$page_range < max_pages) {
+  } else if (con$page_range == max_pages) {
     pages <- 1:con$page_range
   } else {
     stop(paste('The maximum number of pages for the tag = ', '"', 'tag', '"', 'is', max_pages, '\n',
