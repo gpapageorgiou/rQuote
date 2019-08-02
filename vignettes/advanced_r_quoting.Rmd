@@ -1,5 +1,5 @@
 ---
-title: "Basic Advanced rQuoting"
+title: "rQuoting"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Advanced rQuoting}
@@ -13,8 +13,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-
-## Basic rQuoting
 
 Start by loading <span style = "font-family: 'orbitron'"> rQuote </span>.
 
@@ -45,6 +43,3 @@ rQuote(theme = 'dark')
 ```
 
 <img src = "../niels_bohr_dark.png">
-
-## Advanced rQuoting
-

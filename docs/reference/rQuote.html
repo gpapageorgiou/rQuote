@@ -41,7 +41,7 @@
   <script src="../extra.js"></script>
 <meta property="og:title" content="rQuote — rQuote" />
 
-<meta property="og:description" content="Prints a random quote extracted from the goodreads.com database" />
+<meta property="og:description" content="Prints a random quote extracted from goodreads.com" />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -100,7 +100,7 @@
       <a href="../articles/care_to_explain.html">Care to explain?</a>
     </li>
     <li>
-      <a href="../articles/advanced_r_quoting.html">Basic Advanced rQuoting</a>
+      <a href="../articles/advanced_r_quoting.html">rQuoting</a>
     </li>
   </ul>
 </li>
@@ -132,28 +132,24 @@
 
     <div class="ref-description">
     
-    <p>Prints a random quote extracted from the goodreads.com database</p>
+    <p>Prints a random quote extracted from goodreads.com</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rQuote</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>"science"</span>, <span class='kw'>page_range</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fu'>detectCores</span>() - <span class='fl'>1</span>,
-  <span class='kw'>OS</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"windows"</span>, <span class='st'>"linux"</span>, <span class='st'>"macOS"</span>), <span class='kw'>theme</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"light"</span>, <span class='st'>"dark"</span>),
-  <span class='kw'>popup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>rQuote</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>"science"</span>, <span class='kw'>cores</span> <span class='kw'>=</span> <span class='fu'>detectCores</span>() - <span class='fl'>1</span>, <span class='kw'>OS</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"windows"</span>,
+  <span class='st'>"linux"</span>, <span class='st'>"macOS"</span>), <span class='kw'>theme</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"light"</span>, <span class='st'>"dark"</span>), <span class='kw'>popup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>tag</th>
-      <td><p>A character string specifying the desired tag to look quotes from</p></td>
-    </tr>
-    <tr>
-      <th>page_range</th>
-      <td><p>Integer specifying the number of Goodreads' pages with the specific tag to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.</p></td>
+      <td><p>A character string specifying the desired tag to look quotes from. Defaults to 'science'.</p></td>
     </tr>
     <tr>
       <th>cores</th>
-      <td><p>Integer specifying the number of cores to be used by the function. Defaults to the number of cores dtected on the current host minus 1.</p></td>
+      <td><p>Integer specifying the number of cores to be used by the function. Defaults to the number of cores detected on the current host minus 1.</p></td>
     </tr>
     <tr>
       <th>OS</th>
@@ -165,13 +161,14 @@
     </tr>
     <tr>
       <th>popup</th>
-      <td><p>Logical; if TRUE a pop-up plot window with the quote appears.</p></td>
+      <td><p>Logical; if TRUE a pop-up plot window with the quote appears. Defaults to 'TRUE'</p></td>
     </tr>
     <tr>
       <th>control</th>
       <td><p>a list of control values with components:</p><ul>
-<li><p>width: width of plotting device</p></li>
-<li><p>height: height of plotting device</p></li>
+<li><p>page_range: Integer specifying the number of Goodreads' pages to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.</p></li>
+<li><p>width: width of plotting device in inches. Defaults to 48</p></li>
+<li><p>height: height of plotting device in inches. Defaults to 24</p></li>
 </ul></td>
     </tr>
     </table>
