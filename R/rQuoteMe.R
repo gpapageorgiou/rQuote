@@ -1,3 +1,20 @@
+#' rQuoteMe
+#' @description  Plots a quote in a graphics device
+#'
+#' @param quote A character string specifying the quote to plot
+#' @param author A character string specifying the author of the quote
+#' @param theme A character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.
+#' @param fonts A character string specifying the google fonts to be used
+#' @param OS Character string specifying the Operating System of the current host. Defaults to windows.
+#' @param control a list of control values with components: \itemize{
+#' \item{text size: the size of the fonts used to plot the quote in mm. Defaults to 7}
+#' }
+#'
+#' @details
+#'
+#' @author Grigorios Papageorgiou \email{g.papageorgiou@@erasmusmc.nl}
+#' @export
+
 rQuoteMe <- function(quote, author, theme = 'light',
                      fonts = 'Francois One', OS = c('windows', 'linux', 'macOS'),
                      control = list(), ...) {
