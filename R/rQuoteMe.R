@@ -7,7 +7,9 @@
 #' @param fonts A character string specifying the google fonts to be used
 #' @param OS Character string specifying the Operating System of the current host. Defaults to windows.
 #' @param control a list of control values with components: \itemize{
-#' \item{text size: the size of the fonts used to plot the quote in mm. Defaults to 7}
+#' \item{width: width of plotting device in inches. Defaults to 48.}
+#' \item{height: height of plotting device in inches. Defaults to 24.}
+#' \item{text size: the size of the fonts used to plot the quote in mm. Defaults to 7.}
 #' }
 #'
 #' @details
