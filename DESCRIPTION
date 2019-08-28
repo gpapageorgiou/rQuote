@@ -1,18 +1,17 @@
 Package: rQuote
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Random words of wisdom in curly quotes.
 Version: 1.0.0
 Authors@R: person("Grigorios", "Papageorgiou", email = "g.papageorgiou@erasmusmc.nl",
                   role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Prints random quotes or user defined quotes.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Imports: rvest, doParallel, xml2, ggplot2, foreach, parallel, showtext, stringi
 Depends: rvest, doParallel, xml2, ggplot2, foreach, parallel, showtext, stringi
 RoxygenNote: 6.1.1
-URL: https://github.com/gpapageorgiou/rQuote
+URL: https://gpapageorgiou.github.io/rQuote/, https://github.com/gpapageorgiou/rQuote
 Suggests: 
     knitr,
     rmarkdown
