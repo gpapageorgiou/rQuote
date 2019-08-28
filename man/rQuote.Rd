@@ -4,20 +4,22 @@
 \alias{rQuote}
 \title{rQuote}
 \usage{
-rQuote(tag = "science", cores = detectCores() - 1, OS = c("windows",
-  "linux", "macOS"), theme = c("light", "dark"), popup = TRUE,
-  fonts = "Francois One", control = NULL, ...)
+rQuote(tag = "science", theme = c("light", "dark"),
+  fonts = "Francois One", popup = TRUE, cores = detectCores() - 1,
+  OS = c("windows", "linux", "macOS"), control = NULL, ...)
 }
 \arguments{
 \item{tag}{A character string specifying the desired tag to look quotes from. Defaults to 'science'.}
 
+\item{theme}{Character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.}
+
+\item{fonts}{Character string specifying the desired Google fonts to use. Fonts are installed using function \code{\link[sysfonts]{font_add_google}} from package \strong{sysfonts}.}
+
+\item{popup}{Logical; if TRUE a pop-up plot window with the quote appears. Defaults to 'TRUE'.}
+
 \item{cores}{Integer specifying the number of cores to be used by the function. Defaults to the number of cores detected on the current host minus 1.}
 
 \item{OS}{Character string specifying the Operating System of the current host. Defaults to windows.}
-
-\item{theme}{Character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.}
-
-\item{popup}{Logical; if TRUE a pop-up plot window with the quote appears. Defaults to 'TRUE'.}
 
 \item{control}{a list of control values with components: \itemize{
 \item{page_range: Integer specifying the number of Goodreads' pages to look quotes from. Defaults to 1. Must be greater than zero and less or equal to 100.}

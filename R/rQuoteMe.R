@@ -4,7 +4,7 @@
 #' @param quote A character string specifying the quote to plot
 #' @param author A character string specifying the author of the quote
 #' @param theme A character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.
-#' @param fonts A character string specifying the google fonts to be used
+#' @param fonts Character string specifying the desired Google fonts to use. Fonts are installed using function \code{\link[sysfonts]{font_add_google}} from package \strong{sysfonts}.
 #' @param OS Character string specifying the Operating System of the current host. Defaults to windows.
 #' @param control a list of control values with components: \itemize{
 #' \item{width: width of plotting device in inches. Defaults to 48.}

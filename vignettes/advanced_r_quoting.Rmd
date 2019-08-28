@@ -44,8 +44,14 @@ rQuote(theme = 'dark')
 
 <img src = "../niels_bohr_dark.png">
 
-To get a quote from a tag different than 'science' change the tag argument. For more information on what types of tags are possible see the \textbf{Details} section of the help page: [`rQuote`](../reference/rQuote.html) 
+To get a quote from a tag different than 'science', simply change the tag argument. For example you can get a quote about statistics by specifying `tag = 'statistics'`
 
 ```{r, echo = FALSE}
-set.seed(268)
+set.seed(1)
 ```
+
+```{r}
+rQuote(tag = 'statistics')
+```
+
+For more information on what types of tags are possible see the \textbf{Details} section of the help page: [`rQuote`](../reference/rQuote.html) 
