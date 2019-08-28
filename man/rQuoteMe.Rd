@@ -14,7 +14,7 @@ rQuoteMe(quote, author, theme = "light", fonts = "Francois One",
 
 \item{theme}{A character string specifying whether the light or the dark theme should be used for the pop-up plot window. Defaults to 'light'.}
 
-\item{fonts}{A character string specifying the google fonts to be used}
+\item{fonts}{Character string specifying the desired Google fonts to use. Fonts are installed using function \code{\link[sysfonts]{font_add_google}} from package \strong{sysfonts}.}
 
 \item{OS}{Character string specifying the Operating System of the current host. Defaults to windows.}
 

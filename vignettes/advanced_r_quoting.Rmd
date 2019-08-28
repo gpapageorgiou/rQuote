@@ -54,4 +54,16 @@ set.seed(1)
 rQuote(tag = 'statistics')
 ```
 
-For more information on what types of tags are possible see the \textbf{Details} section of the help page: [`rQuote`](../reference/rQuote.html) 
+<img src = "../mark_twain_statistics.png">
+
+For more information on what types of tags are possible see the \textbf{Details} section of the help page: [`rQuote()`](../reference/rQuote.html).
+
+To quote yourself, you can use function [`rQuoteMe()`](../reference/rQuoteMe.html). Here is an example of me quoting myself using the dark theme:
+
+```{r}
+rQuoteMe(quote = 'There are moments in life when randomly quoting the words of someone else, is better than not saying anything. Just keep in mind that these moments are very rare.', 
+         author = 'Greg Papageorgiou', 
+         theme = 'dark')
+```
+
+<img src = "../Greg_quote.png">
