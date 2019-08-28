@@ -1,4 +1,4 @@
-# rQuote <img src="man/figures/logo.svg" align="right" alt="" width="180" />
+# rQuote <img src="man/figures/logo.png" align="right" alt="" width="180" />
 
 <span style = "font-family: Orbitron"><strong>rQuote</strong></span> prints a random quote. And that pretty much covers all this package can do.
 
