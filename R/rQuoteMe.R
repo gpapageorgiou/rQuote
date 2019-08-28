@@ -38,6 +38,8 @@ rQuoteMe <- function(quote, author, theme = 'light',
 
   con$text_size <- ifelse(nchar(quote) > 1750, 5, con$text_size)
 
+  author <- paste0("-  ", author)
+
   if (theme == 'light') {
     rquote <- ggplot() + xlim(0, 4) + ylim(0, 4) + theme_void() +
       theme(panel.background = element_rect(fill = '#f5f5f5')) +
