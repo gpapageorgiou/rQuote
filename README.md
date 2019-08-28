@@ -21,8 +21,7 @@ Installation
 To install <span style = "font-family: Orbitron"><strong>rQuote</strong></span> use the following code:
 
 ```r
-# install.packages('devtools')
-install_github('gpapageorgiou/rQuote')
+devtools::install_github('gpapageorgiou/rQuote')
 ```
 
 Get a random quote
