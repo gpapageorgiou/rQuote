@@ -4,7 +4,7 @@ Title: Random words of wisdom in curly quotes.
 Version: 1.0.0
 Authors@R: person("Grigorios", "Papageorgiou", email = "g.papageorgiou@erasmusmc.nl",
                   role = c("aut", "cre"))
-Description: Prints random quotes or user defined quotes.
+Description: Prints random or user defined quotes.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
