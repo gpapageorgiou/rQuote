@@ -87,8 +87,7 @@ rQuote <- function(tag = 'science',
 
   random_row <- sample(nrow(res), 1)
   quote <- res[random_row, 'quote']
-  #author <- trimws(res[random_row, 'author'])
-  #author <- paste0("-  ", author)
+  author <- trimws(res[random_row, 'author'])
 
   if(length(quote) == 0) {
     stop("No quote found. Probably the tag you are searching for does not exist. Change tag and try again.")
