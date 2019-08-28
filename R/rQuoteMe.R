@@ -38,6 +38,7 @@ rQuoteMe <- function(quote, author, theme = 'light',
 
   con$text_size <- ifelse(nchar(quote) > 1750, 5, con$text_size)
 
+  author <- trimws(author)
   author <- paste0("-  ", author)
 
   if (theme == 'light') {
