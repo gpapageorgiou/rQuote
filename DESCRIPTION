@@ -1,7 +1,7 @@
 Package: rQuote
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: person("Grigorios", "Papageorgiou", email = "g.papageorgiou@erasmusmc.nl",
                   role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line)
