@@ -11,7 +11,7 @@ LazyData: true
 Imports: rvest, doParallel, xml2, ggplot2, foreach, parallel, showtext, stringi
 Depends: rvest, doParallel, xml2, ggplot2, foreach, parallel, showtext, stringi
 RoxygenNote: 6.1.1
-URL: https://gpapageorgiou.github.io/rQuote/
+URL: https://gpapageorgiou.github.io/rQuote/, https://github.com/gpapageorgiou/rQuote
 Suggests: 
     knitr,
     rmarkdown
