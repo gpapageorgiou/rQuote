@@ -31,7 +31,7 @@ Get a random quote
 rQuote()
 ```
 
-<img src = "../niels_bohr.png">
+![](docs/niels_bohr.png)
 
 Get a random quote about statistics
 -------------------
@@ -40,4 +40,4 @@ Get a random quote about statistics
 rQuote(tag = 'statistics')
 ```
 
-<img src = "../mark_twain_statistics.png">
+![](docs/mark_twain_statistics.png)
