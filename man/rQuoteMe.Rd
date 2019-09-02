@@ -21,7 +21,7 @@ rQuoteMe(quote, author, theme = "light", fonts = "Francois One",
 \item{control}{a list of control values with components: \itemize{
 \item{width: width of plotting device in inches. Defaults to 48.}
 \item{height: height of plotting device in inches. Defaults to 24.}
-\item{text size: the size of the fonts used to plot the quote in mm. Defaults to 7.}
+\item{text_size: the size of the fonts used to plot the quote in mm. Defaults to 7.}
 }}
 }
 \description{
